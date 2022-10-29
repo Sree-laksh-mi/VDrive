@@ -1,6 +1,6 @@
 ﻿namespace VDrive.Model
 {
-    public class Rootobject
+    public class FoodBanks
     {
         public string name { get; set; }
         public object alt_name { get; set; }
