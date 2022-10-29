@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using VDrive.Services;
 
 namespace VDrive.Controllers
 {
@@ -14,10 +15,20 @@ namespace VDrive.Controllers
         //    return 10;
         //}
 
-        [HttpGet(Name = "GetLocation")]
+        [HttpGet("GetLocation")]
         public string GetNearestFoodBankLocation(string id)
         {
             return id;
+        }
+
+        [HttpGet("GetSomeValue")]
+        public IActionResult GetSomeValue(string location)
+        {
+           
+
+            var data = FoodBankApi.GetFoodBanksByLocation(location);
+
+            return Json(data);
         }
 
 

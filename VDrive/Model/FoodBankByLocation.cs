@@ -1,12 +1,11 @@
 ﻿namespace VDrive.Model
 {
-
-    public class FoodBankByLocation
+    public class Rootobject
     {
-        public FB[] Property1 { get; set; }
+        public Class1[] Property1 { get; set; }
     }
 
-    public class FB
+    public class Class1
     {
         public string name { get; set; }
         public object alt_name { get; set; }
@@ -64,5 +63,4 @@
         public string self { get; set; }
         public string html { get; set; }
     }
-
 }
