@@ -15,18 +15,12 @@ namespace VDrive.Controllers
         //}
 
         [HttpGet(Name = "GetLocation")]
-        public int GetLocation(int id)
+        public string GetNearestFoodBankLocation(string id)
         {
             return id;
         }
 
-       
 
-        //[HttpGet]
-        //public int GetFBName(int id)
-        //{
-        //    return 3;
-        //}
 
     }
 }
