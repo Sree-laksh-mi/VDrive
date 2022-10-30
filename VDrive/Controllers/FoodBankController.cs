@@ -15,16 +15,15 @@ namespace VDrive.Controllers
         //    return 10;
         //}
 
-        [HttpGet("GetLocation")]
-        public string GetNearestFoodBankLocation(string id)
-        {
-            return id;
-        }
+        //[HttpGet("GetLocation")]
+        //public string GetNearestFoodBankLocation(string id)
+        //{
+        //    return id;
+        //}
 
-        [HttpGet("GetSomeValue")]
-        public IActionResult GetSomeValue(string location)
+        [HttpGet("GetNearestFoodBankLocation")]
+        public IActionResult GetNearestFoodBankLocation(string location)
         {
-           
 
             var data = FoodBankApi.GetFoodBanksByLocation(location);
 
