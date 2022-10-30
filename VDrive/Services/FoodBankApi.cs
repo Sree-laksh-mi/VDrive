@@ -19,7 +19,7 @@ namespace VDrive.Services
        static string baseUrl = "https://www.givefood.org.uk/api/2/";
 
         
-        public static List<Class1> GetFoodBanksByLocation(string location) 
+        public static List<Foodbank> GetFoodBanksByLocation(string location) 
         {
 
             try
@@ -41,7 +41,7 @@ namespace VDrive.Services
                     var response = client.Execute(request);
                     Console.WriteLine(response.Content);
 
-                    var fbdata = JsonSerializer.Deserialize<Class1[]>(response.Content).ToList();
+                    var fbdata = JsonSerializer.Deserialize<Foodbank[]>(response.Content).ToList();
                     
                     return fbdata;
 
@@ -49,7 +49,7 @@ namespace VDrive.Services
             }
             catch (Exception)
             {
-                return new List<Class1>();
+                return new List<Foodbank>();
                 throw;
             }
 
