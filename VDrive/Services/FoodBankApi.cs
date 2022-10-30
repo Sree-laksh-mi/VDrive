@@ -49,7 +49,7 @@ namespace VDrive.Services
             }
             catch (Exception)
             {
-
+                return new List<Class1>();
                 throw;
             }
 

@@ -24,8 +24,9 @@ namespace VDrive.Controllers
         [HttpGet("GetNearestFoodBankLocation")]
         public IActionResult GetNearestFoodBankLocation(string location)
         {
-
             var data = FoodBankApi.GetFoodBanksByLocation(location);
+            if (data.Count == 0)
+                return NotFound();
 
             return Json(data);
         }
