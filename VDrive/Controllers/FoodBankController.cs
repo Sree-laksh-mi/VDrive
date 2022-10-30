@@ -23,7 +23,7 @@ namespace VDrive.Controllers
         //{
         //    return id;
         //}
-        [EnableCors]
+        //[EnableCors]
         [HttpGet("GetNearestFoodBankLocation")]
         public IActionResult GetNearestFoodBankLocation(string location)
         {
